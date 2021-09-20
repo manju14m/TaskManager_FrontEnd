@@ -1,0 +1,8 @@
+export const GET_TASK = "GET_TASK"
+export const ADD_TASK = "ADD_TASK"
+export const UPDATE_TASK = "UPDATE_TASK"
+export const DELETE_TASK = "DELETE_TASK"
+// export const POST = "POST"
+// export const PUT = "PUT"
+// export const GET = "GET"
+// export const DELETE = "DELETE"

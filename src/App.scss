@@ -1,0 +1,26 @@
+body {
+  font-size: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "styles/card";
+@import "styles/header";
+@import "styles/button";
+@import "styles/taskPage";
+@import "styles/profile";
+@import "styles/cardContainer";
+@import "styles/taskCard";
+@import "styles/modal";
+@import "styles/backDrop";
+@import "styles/taskForm";
+@import "styles/editForm";
+
+@media (max-width: 750px) {
+  body {
+    font-size: 11px;
+  }
+}

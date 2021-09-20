@@ -1,0 +1,38 @@
+.modal {
+  width: 40%;
+  background-color: rgb(214, 240, 184);
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close {
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  color: red;
+}
+
+@media (max-width: 900px) {
+  .modal {
+    width: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  .modal {
+    width: 70%;
+  }
+}
+@media (max-width: 450px) {
+  .modal {
+    width: 90%;
+  }
+}

@@ -1,0 +1,27 @@
+.card {
+  height: 70vh;
+  min-width: 450px;
+  border-radius: 10px;
+  padding: 10px 0;
+  background-color: rgb(233, 231, 231);
+  margin: 20px 20px;
+  overflow-x: auto;
+  h2 {
+    color: rgb(71, 67, 67);
+    padding: 10px;
+    // font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    min-width: 90%;
+    margin: 20px 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    min-height: 50vh;
+  }
+}

@@ -1,0 +1,42 @@
+.taskCard {
+  background-color: white;
+  margin: 10px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(80, 110, 110);
+    .delete {
+      cursor: pointer;
+      color: red;
+    }
+  }
+  .description {
+    font-size: 1rem;
+    color: rgb(48, 53, 53);
+    padding: 2px 0;
+  }
+  .duration {
+    font-size: 0.8rem;
+    color: gray;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    p {
+      display: flex;
+      align-items: center;
+      padding: 2px;
+    }
+    .expired {
+      color: red;
+    }
+    .expires {
+      color: orange;
+    }
+  }
+}

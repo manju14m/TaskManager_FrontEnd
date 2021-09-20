@@ -1,0 +1,10 @@
+.taskPage {
+  width: 100vw;
+  height: 100vh;
+  // position: relative;
+  .headerBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+}

@@ -1,0 +1,346 @@
+body {
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card {
+  height: 70vh;
+  min-width: 450px;
+  border-radius: 10px;
+  padding: 10px 0;
+  background-color: #e9e7e7;
+  margin: 20px 20px;
+  overflow-x: auto;
+}
+
+.card h2 {
+  color: #474343;
+  padding: 10px;
+}
+
+@media (max-width: 450px) {
+  .card {
+    min-width: 90%;
+    margin: 20px 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    min-height: 50vh;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 0;
+}
+
+.header h1 {
+  color: #696906;
+}
+
+.button {
+  padding: 10px 15px;
+  color: white;
+  background-color: #57880d;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+.taskPage {
+  width: 100vw;
+  height: 100vh;
+}
+
+.taskPage .headerBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.profile {
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.cardContainer {
+  background-color: #cec9c9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.taskCard {
+  background-color: white;
+  margin: 10px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.taskCard .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #506e6e;
+}
+
+.taskCard .title .delete {
+  cursor: pointer;
+  color: red;
+}
+
+.taskCard .description {
+  font-size: 1rem;
+  color: #303535;
+  padding: 2px 0;
+}
+
+.taskCard .duration {
+  font-size: 0.8rem;
+  color: gray;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.taskCard .duration p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px;
+}
+
+.taskCard .duration .expired {
+  color: red;
+}
+
+.taskCard .duration .expires {
+  color: orange;
+}
+
+.modal {
+  width: 40%;
+  background-color: #d6f0b8;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.close {
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  color: red;
+}
+
+@media (max-width: 900px) {
+  .modal {
+    width: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  .modal {
+    width: 70%;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal {
+    width: 90%;
+  }
+}
+
+.backDrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.TaskFormContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form input[type="text"],
+.form input[type="date"] {
+  min-width: 100% !important;
+  padding: 10px;
+  border: none;
+  margin: 5px 0px;
+  border-radius: 10px;
+}
+
+.form input[type="text"]:focus,
+.form input[type="date"]:focus {
+  background-color: #cff1e6;
+}
+
+.form label {
+  color: #534a4a;
+  font-size: 1rem;
+}
+
+.close {
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  color: red;
+}
+
+.editFormContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.editForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.editForm input[type="text"],
+.editForm input[type="date"],
+.editForm select {
+  min-width: 100% !important;
+  padding: 10px;
+  border: none;
+  margin: 5px 0px;
+  border-radius: 10px;
+}
+
+.editForm input[type="text"]:focus,
+.editForm input[type="date"]:focus,
+.editForm select:focus {
+  background-color: #cff1e6;
+}
+
+.editForm label {
+  color: #534a4a;
+  font-size: 1rem;
+}
+
+.editFormClose {
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  color: red;
+}
+
+@media (max-width: 750px) {
+  body {
+    font-size: 11px;
+  }
+}
+/*# sourceMappingURL=App.css.map */
