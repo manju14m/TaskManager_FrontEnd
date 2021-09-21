@@ -8,9 +8,11 @@ import {useDispatch, useSelector} from "react-redux"
 export default function CardContainer() {
   const dispatch = useDispatch()
   const task = useSelector(state =>state.task.tasks)
+  
   useEffect(()=>{
     dispatch(Actions.getTask())
   },[dispatch])
+
   return (
     <div className="cardContainer">
         <Card title="To Do">

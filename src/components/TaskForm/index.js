@@ -15,12 +15,21 @@ const handleTask = (e)=>{
   setTask({...task,[e.target.name]:e.target.value})
 }
 
+const disable = !task.title || !task.description
 
 const handleSubmit =(e) =>{
   e.preventDefault()
-  dispatch(Actions.addTask(task))
+  if(disable){
+    return
+  }
+  dispatch(Actions.addTask(task,refreshTask))
   setTask({});
   setShow(!show)
+}
+
+const refreshTask =()=>{
+  console.log("refresh")
+  dispatch(Actions.getTask())
 }
 
   return (
@@ -38,7 +47,7 @@ const handleSubmit =(e) =>{
         <input type="text" id="description" name="description" onChange={handleTask} value={task.description} placeholder="Enter Description" required />
         <label htmlFor="targetDate">Target Date:</label>
         <input type="date" id="targetDate" name="targetDate" onChange={handleTask} value={task.date} placeholder="Enter Target Date" required/>
-        <Button title="submit" onClick={handleSubmit}/>
+        <Button title="submit"  onClick={handleSubmit}/>
       </div>  
     </div>
   )
