@@ -8,11 +8,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: rgb(80, 110, 110);
+    color: rgb(18, 126, 126);
+    margin-bottom: 5px;
     p {
       cursor: pointer;
+      text-overflow: ellipsis;
+      width: 90%;
     }
     .delete {
+      width: 10%;
       cursor: pointer;
       color: red;
     }
@@ -20,11 +24,12 @@
   .description {
     font-size: 1rem;
     color: rgb(48, 53, 53);
-    padding: 2px 0;
+    padding: 5px 0;
+    text-align: justify;
   }
   .duration {
     font-size: 0.8rem;
-    color: gray;
+    color: rgb(12, 58, 100);
     margin-top: 5px;
     display: flex;
     flex-wrap: wrap;

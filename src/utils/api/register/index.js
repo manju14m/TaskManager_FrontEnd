@@ -2,10 +2,11 @@ import axios from "axios"
 import * as URL from "../../../constants"
 
 
-export default async function post(body,config){
+export default async function register(body){
   const response = await axios
-  .post(URL.TaskUrl,body,config)
-  .then(res => res)
+  .post(URL.RegisterUrl, body)
+  .then(response => response)
   .catch(err =>err.response)
+
   return response
 }

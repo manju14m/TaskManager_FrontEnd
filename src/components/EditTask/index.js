@@ -1,14 +1,12 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Button from "../Button"
 import { GrClose } from 'react-icons/gr';
 import  * as Actions  from '../../actions';
 import {useDispatch,} from "react-redux"
-import * as URL from "../../constants"
 
 
 
 export default function EditTask({show,setShow,task,setTask, id}) {
-// const [task, setTask] = useState({})
 
 const dispatch = useDispatch()
 

@@ -1,9 +1,9 @@
 import axios from "axios"
 import * as URL from "../../../constants"
 
-export default async function get(){
-  const response = await axios.get(URL.TaskUrl)
+export default async function get(config){
+  const response = await axios.get(URL.TaskUrl,config)
   .then((res)=> res)
-  .catch(err => console.log(err.response))
+  .catch(err => err.response)
   return response
 }

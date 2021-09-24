@@ -6,10 +6,11 @@
   background-color: rgb(233, 231, 231);
   margin: 20px 20px;
   overflow-x: auto;
-  h2 {
-    color: rgb(71, 67, 67);
+  .cardTitle {
+    color: rgb(101, 167, 14);
     padding: 10px;
-    // font-size: 1.5rem;
+    box-shadow: 0px 10px 12px -8px;
+    margin-bottom: 20px;
   }
 }
 

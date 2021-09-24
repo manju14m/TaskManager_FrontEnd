@@ -19,9 +19,12 @@ body {
   overflow-x: auto;
 }
 
-.card h2 {
-  color: #474343;
+.card .cardTitle {
+  color: #65a70e;
   padding: 10px;
+  -webkit-box-shadow: 0px 10px 12px -8px;
+          box-shadow: 0px 10px 12px -8px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 450px) {
@@ -49,6 +52,8 @@ body {
 
 .header h1 {
   color: #696906;
+  -webkit-box-shadow: 0px 10px 12px -8px;
+          box-shadow: 0px 10px 12px -8px;
 }
 
 .button {
@@ -99,10 +104,18 @@ body {
   padding: 20px;
   border-radius: 50%;
   font-size: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 12px -8px;
+          box-shadow: 0px 10px 12px -8px;
+}
+
+.profile > button {
+  position: absolute;
+  top: 30px;
 }
 
 .cardContainer {
-  background-color: #cec9c9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,14 +142,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #506e6e;
+  color: #127e7e;
+  margin-bottom: 5px;
 }
 
 .taskCard .title p {
   cursor: pointer;
+  text-overflow: ellipsis;
+  width: 90%;
 }
 
 .taskCard .title .delete {
+  width: 10%;
   cursor: pointer;
   color: red;
 }
@@ -144,12 +161,13 @@ body {
 .taskCard .description {
   font-size: 1rem;
   color: #303535;
-  padding: 2px 0;
+  padding: 5px 0;
+  text-align: justify;
 }
 
 .taskCard .duration {
   font-size: 0.8rem;
-  color: gray;
+  color: #0c3a64;
   margin-top: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -227,16 +245,6 @@ body {
   }
 }
 
-.backDrop {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .TaskFormContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,6 +263,7 @@ body {
 }
 
 .form {
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,6 +318,7 @@ body {
 }
 
 .editForm {
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,6 +355,81 @@ body {
   top: 15px;
   right: 25px;
   color: red;
+}
+
+.container {
+  height: 90vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .form-holder {
+  width: 400px;
+  background: #beb1b1;
+  border: 1px solid #ced4da;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.container .form-holder form {
+  padding: 20px;
+}
+
+.container .form-holder form h3 {
+  color: red;
+  text-align: center;
+}
+
+.container .form-holder h2 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.container .form-holder .form-group {
+  margin: 20px 20px;
+}
+
+.container .form-holder input {
+  background: #f4f4f4;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  height: 41px;
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: 10px;
+}
+
+.container .form-holder input:focus {
+  border-bottom: 2px solid red;
+}
+
+.container .form-holder p {
+  margin-left: 20px;
+}
+
+.container .form-holder button {
+  padding: 10px;
+  width: 40%;
+  background-color: #6df06d;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.container .form-holder button:hover {
+  -webkit-filter: opacity(0.8);
+          filter: opacity(0.8);
 }
 
 @media (max-width: 750px) {
