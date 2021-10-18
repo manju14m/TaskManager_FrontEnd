@@ -22,7 +22,7 @@ export default function TaskPage() {
       </div>
       <CardContainer/>
       {
-        show && <Modal><TaskForm show={show} setShow={setShow}/></Modal>
+        show && <Modal onClick={()=>setShow(false)}><TaskForm show={show} setShow={setShow}/></Modal>
       }
     </div>
   )

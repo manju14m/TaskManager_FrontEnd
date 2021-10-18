@@ -1,6 +1,7 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState} from 'react'
 import { MdDelete } from 'react-icons/md';
 import { BiTimeFive } from 'react-icons/bi';
+import { FiEdit } from 'react-icons/fi';
 import moment from "moment"
 import EditTask from "../../components/EditTask"
 import Modal from "../../components/Modal"
@@ -48,7 +49,8 @@ export default function TaskCard({data}) {
     <>
     <div className="taskCard">
       <div className="title">
-        <p onClick={() =>  {getById(data._id)}}>{data?.title}</p>
+        <p>{data?.title}</p>
+        <FiEdit className="edit"  onClick={() =>  {getById(data._id)}}/>
         <MdDelete className="delete" onClick={()=>{deleteTask(data._id)}}/>
       </div>
       <div className="description">
@@ -67,7 +69,7 @@ export default function TaskCard({data}) {
       </div>
     </div>
       {
-        show && <Modal><EditTask show={show} id={data._id} task ={task} setTask={setTask} setShow={setShow}/></Modal>
+        show && <Modal onClick={()=>setShow(false)}><EditTask show={show} id={data._id} task ={task} setTask={setTask} setShow={setShow}/></Modal>
       }
     
     </>

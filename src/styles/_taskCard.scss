@@ -11,9 +11,11 @@
     color: rgb(18, 126, 126);
     margin-bottom: 5px;
     p {
-      cursor: pointer;
       text-overflow: ellipsis;
       width: 90%;
+    }
+    .edit {
+      cursor: pointer;
     }
     .delete {
       width: 10%;

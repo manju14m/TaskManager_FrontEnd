@@ -1,3 +1,17 @@
+.modalContainer {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  // background-color: linear-gradient(rgb(83, 95, 68), rgba(110, 56, 56, 0.9));
+  background-image: linear-gradient(
+    rgba(77, 65, 65, 0.7),
+    rgba(77, 65, 65, 0.7)
+  );
+  position: absolute;
+  z-index: 100;
+}
+
 .modal {
   width: 40%;
   background-color: rgb(214, 240, 184);

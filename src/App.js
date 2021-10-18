@@ -1,9 +1,6 @@
 import './App.css';
 import TaskPage from "./pages/Task"
-import {useEffect} from "react"
-import store from "./store"
-import {Provider} from "react-redux"
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import {BrowserRouter as Router, Switch} from "react-router-dom"
 import LoginPage from "./components/LoginPage"
 import RegisterPage from "./components/RegisterPage"
 import PrivateRoute from "./PrivateRoute"
